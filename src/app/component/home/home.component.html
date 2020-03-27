@@ -1,0 +1,150 @@
+<mat-card class="bannerblock">
+    <span class="formwrapper">
+        <h2>ORDER NOW</h2>
+        <span class="formsubwrapper">        
+        <form [formGroup]="myForm" (ngSubmit)="submit()">
+         <span class="frorgroup">
+         <input type="text" placeholder="First Name" formControlName="fname">
+        </span>
+        <span class="frorgroup">
+            <input type="text" placeholder="Last Name" formControlName="lname">
+        </span>
+        <span class="frorgroup">
+            <input type="email" placeholder="Email Address" formControlName="email">
+        </span>
+        <span class="frorgroup">
+            <input type="text" placeholder="Company Name" formControlName="companyname">
+        </span>
+        <span class="frorgroup formradio">
+            <p>Government Purchase</p>
+            <mat-radio-group aria-label="Government Purchase" formControlName="governmentpurchase">
+                <mat-radio-button value="yes">yes</mat-radio-button>
+                <mat-radio-button value="no">no</mat-radio-button>
+              </mat-radio-group>
+        </span>
+        <span class="frorgroup formradio">
+            <p>Medical Facility </p>
+            <mat-radio-group aria-label="Medical Facility" formControlName="medicalfacility">
+                <mat-radio-button value="yes">yes</mat-radio-button>
+                <mat-radio-button value="no">no</mat-radio-button>
+              </mat-radio-group>
+        </span>
+        <span class="frorgroup">
+            <mat-card-content class="colcontainer">
+                <span class="col-2">
+                    <mat-form-field>
+                        <mat-label>Country  </mat-label>
+                        <mat-select [(value)]="selected">
+                          <mat-option>None</mat-option>
+                          <mat-option value="option1d">Option 1</mat-option>
+                          <mat-option value="option2d">Option 2</mat-option>
+                          <mat-option value="option3d">Option 3</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </span>
+                <span class="col-2">
+                    <mat-form-field>
+                        <mat-label>State</mat-label>
+                        <mat-select [(value)]="selected">
+                          <mat-option>None</mat-option>
+                          <mat-option value="option1">Option 1</mat-option>
+                          <mat-option value="option2">Option 2</mat-option>
+                          <mat-option value="option3">Option 3</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </span>
+            </mat-card-content>
+        </span>
+        <span class="frorgroup">
+            <input type="text" placeholder="Business Phone" formControlName="businessphone">
+        </span>
+        <span class="frorgroup">
+            <input type="text" placeholder="Mobile Phone" formControlName="mobilephone">
+        </span>
+        <span class="frorgroup">
+          
+            <input type="number" placeholder="How Many Masks Do You Need?" formControlName="mask">
+               
+            
+        </span>
+        <br>
+        <span class="frorgroup">
+            <span class="textwrapper">
+                <p>
+                    <span>Disclaimer:</span> You will receive a call from Beto Paredes directly after filling this 
+                    out from a 702 number, please be looking for this.after filling this out from a 702 number, please be looking for this.
+                  </p>
+            </span>            
+        </span>
+        <span class="frorgroup">
+            <button>submit</button>
+        </span>
+        </form>
+    </span>
+    </span>
+ <span class="bannerbuttonwrapper">
+  
+  <button class="l_blue">Strong</button>
+  <button class="d_blue">Soft</button>
+  <button class="l_blue">Breathable</button>
+  <button class="d_blue">THE BEST VIRUS BARRIER</button>
+ </span>
+ <span class="vmimage1"><img src="../../../assets/images/vmimage1.png"></span>
+ <span class="vmimage2"><img src="../../../assets/images/vmimage2.png"></span>
+</mat-card>
+
+<span class="homeblock2 padding-tb">
+	<span class="ascontainer">
+		<span class="titlewrapper">
+			<h2>THE MASKS</h2>
+		</span>
+		<div class="block2list">
+			<div class="block2listitem">
+				<div class="textwrapper">
+					<h3>SSMMS MASK WITH TURNS</h3>
+					<p>Made in SSMMS fabric (Spunbond x 2 – Meltblown x 3 – Spunbond) 5 layered 100% Polypropylene nonwoven fabric manufactured using 5 beams. </p>
+					<b class="border"></b>
+					<p>This fabric offers amazing benefits like fine filtration of particles.</p>
+				</div>
+				<div class="imagewrapper">
+					<img src="../../../assets/images/image1.png">
+				</div>
+				<button class="button_w">buy now ></button>
+			</div>
+
+			<div class="block2listitem">
+				<div class="textwrapper">
+					<h3>SSMMS ANATOMICAL MASK</h3>
+					<p>Made in SSMMS fabric (Spunbond x 2 – Meltblown x 3 – Spunbond) 5 layered100%	Polypropylene. </p>
+					<b class="border"></b>
+					<p>With holes in the area of the ears, to provide better fit on the face.</p>
+				</div>
+				<div class="imagewrapper">
+					<img src="../../../assets/images/image2.png">
+				</div>
+				<button class="button_w">buy now ></button>
+			</div>
+
+			<div class="block2listitem">
+				<div class="textwrapper">
+					<h3>BVT PLEATED MASK</h3>
+					<p>Breathable viral barrier of the last generation!</p>
+					<p>This fabric offers amazing benefits like fine filtration of particles.</p>
+					<b class="border"></b>
+					<p>Coronavirus, HIV, Tuberculosis, avian influenza, H1N1, among others greater than 0.027 microns</p>
+				</div>
+				<div class="imagewrapper">
+					<img src="../../../assets/images/image3.png">
+				</div>
+				<button class="button_w">buy now ></button>
+			</div>
+
+
+		</div>
+	</span>
+</span>
+<div style="display: block;"><img src="../../../assets/images/vmblock3.png" style="max-width: 100%;"></div>
+<div style="display: block;"><img src="../../../assets/images/vmblock4.png" style="max-width: 100%;"></div>
+<div style="display: block;"><img src="../../../assets/images/vmblock5.png" style="max-width: 100%;"></div>
+<div style="display: block;"><img src="../../../assets/images/vmblock6.png" style="max-width: 100%;"></div>
+<div style="display: block;"><img src="../../../assets/images/vmblock7.png" style="max-width: 100%;"></div>
