@@ -18,13 +18,13 @@
         <span class="frorgroup formradio">
             <p>Government Purchase</p>
             <mat-radio-group aria-label="Government Purchase" formControlName="governmentpurchase">
-                <mat-radio-button value="yes">yes</mat-radio-button>
-                <mat-radio-button value="no">no</mat-radio-button>
+                <mat-radio-button (click)="gotoTop()"value="yes">yes</mat-radio-button>
+                <mat-radio-button (click)="gotoTop()"value="no">no</mat-radio-button>
               </mat-radio-group>
         </span>
         <span class="frorgroup formradio">
             <p>Medical Facility </p>
-            <mat-radio-group aria-label="Medical Facility" formControlName="governmentpurchase">
+            <mat-radio-group aria-label="Medical Facility" formControlName="medicalfacility">
                 <mat-radio-button value="yes">yes</mat-radio-button>
                 <mat-radio-button value="no">no</mat-radio-button>
               </mat-radio-group>
@@ -84,10 +84,10 @@
     </span>
  <span class="bannerbuttonwrapper">
   
-  <button class="l_blue">Strong</button>
-  <button class="d_blue">Soft</button>
-  <button class="l_blue">Breathable</button>
-  <button class="d_blue">THE BEST VIRUS BARRIER</button>
+  <button (click)="gotoTop()"class="l_blue">Strong</button>
+  <button (click)="gotoTop()"class="d_blue">Soft</button>
+  <button (click)="gotoTop()"class="l_blue">Breathable</button>
+  <button (click)="gotoTop()"class="d_blue">THE BEST VIRUS BARRIER</button>
  </span>
  <span class="vmimage1"><img src="../../../assets/images/vmimage1.png"></span>
  <span class="vmimage2"><img src="../../../assets/images/vmimage2.png"></span>
@@ -95,7 +95,7 @@
 
 
 <div style="display: block; position: relative;"><img src="../../../assets/images/vmblock2.png" style="max-width: 100%;">
-    <button style="position: absolute;left: 568px; bottom: 59px;" class="blackbtn">Order Now !</button>
+    <button (click)="gotoTop()"style="position: absolute;left: 568px; bottom: 59px;" class="blackbtn">Order Now !</button>
 <div class="videowrapper">
     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/T5zGS06MAh0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
@@ -118,7 +118,7 @@
 				<div class="imagewrapper">
 					<img src="../../../assets/images/image1.png">
 				</div>
-				<button class="button_w">buy now ></button>
+				<button (click)="gotoTop()"class="button_w">buy now ></button>
 			</div>
 
 			<div class="block2listitem">
@@ -131,7 +131,7 @@
 				<div class="imagewrapper">
 					<img src="../../../assets/images/image2.png">
 				</div>
-				<button class="button_w">buy now ></button>
+				<button (click)="gotoTop()"class="button_w">buy now ></button>
 			</div>
 
 			<div class="block2listitem">
@@ -145,7 +145,7 @@
 				<div class="imagewrapper">
 					<img src="../../../assets/images/image3.png">
 				</div>
-				<button class="button_w">buy now ></button>
+				<button (click)="gotoTop()"class="button_w">buy now ></button>
 			</div>
 
 
@@ -153,23 +153,25 @@
 	</span>
 </span>
 <div style="display: block; position: relative;"><img src="../../../assets/images/vmblock3.png" style="max-width: 100%;display: block;">
-<button style="position: absolute;right: 160px; bottom: 40px;" class="button_b">buy now ></button>
+<button (click)="gotoTop()"style="position: absolute;right: 160px; bottom: 40px;" class="button_b">buy now ></button>
 </div>
 <div style="display: block; position: relative;"><img src="../../../assets/images/vmblock4.png" style="max-width: 100%;display: block;">
-    <button style="position: absolute; left: 572px;bottom: 61px;" class="button_b">buy now ></button>
-    <button style="position: absolute;right: 190px; bottom: 87px;" class="button_w">buy now ></button>
+    <button (click)="gotoTop()"style="position: absolute; left: 572px;bottom: 61px;" class="button_b">buy now ></button>
+    <button (click)="gotoTop()"style="position: absolute;right: 190px; bottom: 87px;" class="button_w">buy now ></button>
 </div>
 <div style="display: block; position: relative;"><img src="../../../assets/images/vmblock5.png" style="max-width: 100%;display: block;">
-    <button style="position: absolute;right: 160px; bottom: 75px;" class="button_b">buy now ></button>
+    <button (click)="gotoTop()"style="position: absolute;right: 160px; bottom: 75px;" class="button_b">buy now ></button>
 </div>
 <div style="display: block; position: relative;"><img src="../../../assets/images/vmblock6.png" style="max-width: 100%;display: block;">
-<a href="../../../assets/images/TNR_brochure_EN.pdf" target="_blank"><img src="../../../assets/images/lstdownloadpdf.png" style="position: absolute;right: 510px;top: -9px;">
-    <button style="position: absolute;left: 640px; bottom: 120px;" class="button_w">download report <img src="../../../assets/images/downloadarrow.png"></button>
-    <button style="position: absolute;left: 804px; bottom: 53px;" class="button_w">buy now ></button>
-
-
-
-
+<a href="../../../assets/images/TNR_brochure_EN.pdf" target="_blank">
+    <img src="../../../assets/images/lstdownloadpdf.png" style="position: absolute;right: 510px;top: -9px;">
 </a>
+    <button (click)="gotoTop()"style="position: absolute;left: 640px; bottom: 120px;" class="button_w">download report <img src="../../../assets/images/downloadarrow.png"></button>
+    <button (click)="gotoTop()"style="position: absolute;left: 804px; bottom: 53px;" class="button_w">buy now ></button>
+
+
+
+
+
 </div>
 <div style="display: block; position: relative;"><img src="../../../assets/images/vmblock7.png" style="max-width: 100%;"></div>
