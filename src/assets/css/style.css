@@ -407,6 +407,24 @@ display: block;
 button:focus{outline: none;}
 
 
-
+.abc{
+    width: 37%;
+    border: 6px solid #11a3f1;
+    border-radius: 8px;
+    position: relative;
+}
+.abc h1{
+    font-size: 24px;
+    text-align: center;
+}
+.close{
+    background: #0e89cb;
+    position: absolute;
+    right: -24px;
+    top: -21px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
 
 
