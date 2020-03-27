@@ -41,6 +41,25 @@ public selected:any;
   }
   submit(){
     this.openTermsDialog();
+       
+    console.log(this.myForm.value);
+
+    for (let i in this.myForm.controls) {
+      this.myForm.controls[i].markAsTouched();
+    }
+    if (this.myForm.valid) {
+
+      // let  link = this.serverUrl +;
+      // let data = {
+       
+      // };
+      // this.apiService.addDataWithoutToken(data, 'addorupdatedata').subscribe(res => {
+
+       
+
+        
+      // });
+    }
   }
 
   gotoTop() {
@@ -55,6 +74,7 @@ public selected:any;
   openTermsDialog() {            //demo for dialog 
     const dialogRef = this.dialog.open(Success, {
       width: '250px',
+      panelClass: ['modal-sm', 'infomodal'],
     });
 
     dialogRef.afterClosed().subscribe(result => {
