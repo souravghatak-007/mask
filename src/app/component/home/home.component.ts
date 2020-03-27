@@ -40,7 +40,7 @@ public selected:any;
   ngOnInit() {
   }
   submit(){
-    // this.openTermsDialog();
+    this.openTermsDialog();
        
     console.log(this.myForm.value);
 
