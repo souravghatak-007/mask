@@ -31,16 +31,16 @@ public selected:any;
       state: ['', Validators.required],
       country: ['', Validators.required],
       governmentpurchase: ['', Validators.required],
-      medicalfacility:[],
-      businessphone:[],
-      noofmasks:[]
+      medicalfacility:['',Validators.required],
+      businessphone:['',Validators.required],
+      noofmasks:['',Validators.required]
     });
   }
 
   ngOnInit() {
   }
   submit(){
-    this.openTermsDialog();
+    // this.openTermsDialog();
        
     console.log(this.myForm.value);
 
