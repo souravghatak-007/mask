@@ -12,7 +12,8 @@ import { NgtUniversalModule } from '@ng-toolkit/universal';
 import { MetaModule } from '@ngx-meta/core';
 import { HomeComponent } from './component/home/home.component';
 import { DemoMaterialModule } from '../material-module';
-// import { ApiService} from './api.service';
+import { ApiService} from './api.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { DemoMaterialModule } from '../material-module';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ApiService,CookieService],
   schemas:[CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   bootstrap: [AppComponent],
   entryComponents: []

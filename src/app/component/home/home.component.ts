@@ -12,7 +12,7 @@ import { CookieService } from "ngx-cookie-service";
 export class HomeComponent implements OnInit {
   @ViewChild(FormGroupDirective, {static: false}) formDirective: FormGroupDirective;
   public myForm: FormGroup;
-
+public selected:any;
   constructor(public formbuilder: FormBuilder,public apiService:ApiService,public cookie:CookieService) { 
     // this.apiService.gettemptoken().subscribe((res: any) => {
     //   this.cookie.set('jwtToken', res.token);
