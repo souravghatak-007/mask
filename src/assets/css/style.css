@@ -210,6 +210,7 @@ p, h1, h2, h3, h4, h5 {padding:0; margin:0;}
 
 
 .formwrapper{
+    z-index: 9;
 width: 405px;
 display: block;
     background-color: rgba(0,0,0,0.2);

@@ -4,6 +4,7 @@ import {ApiService} from './../../api.service';
 import { from } from 'rxjs';
 import { CookieService } from "ngx-cookie-service";
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MetaService } from '@ngx-meta/core';
 export interface DialogData {
   animal: string;
   name: string;
@@ -18,10 +19,26 @@ export class HomeComponent implements OnInit {
   @ViewChild(FormGroupDirective, {static: false}) formDirective: FormGroupDirective;
   public myForm: FormGroup;
 public selected:any;
-  constructor(public dialog: MatDialog,public formbuilder: FormBuilder,public apiService:ApiService,public cookie:CookieService) { 
-    // this.apiService.gettemptoken().subscribe((res: any) => {
-    //   this.cookie.set('jwtToken', res.token);
-    // });
+  constructor( public meta: MetaService,public dialog: MatDialog,public formbuilder: FormBuilder,public apiService:ApiService,public cookie:CookieService) { 
+    this.apiService.gettemptoken().subscribe((res: any) => {
+      this.cookie.set('jwtToken', res.token);
+    });
+
+    this.meta.setTitle('Virus Barrier Medical Face Mask');
+    // this.meta.update({ name: 'description', content: 'Dynamic Hello Angular Lovers description!' });
+    this.meta.setTag('og:description', 'Virus Barrier Medical Face Mask to keep medical professionals safe and protected against harmful viruses, bacteria, and other critical circumstances, while also tending to their comfort.');
+    this.meta.setTag('twitter:description', 'Virus Barrier Medical Face Mask to keep medical professionals safe and protected against harmful viruses, bacteria, and other critical circumstances, while also tending to their comfort.');
+
+    this.meta.setTag('og:keyword', 'Virus Barrier Medical Face Mask, Medical Face Mask, Medical Face Mask for Virus');
+    this.meta.setTag('twitter:keyword', 'Virus Barrier Medical Face Mask, Medical Face Mask, Medical Face Mask for Virus');
+
+    this.meta.setTag('og:title', 'Virus Barrier Medical Face Mask');
+    this.meta.setTag('twitter:title', 'Virus Barrier Medical Face Mask');
+    this.meta.setTag('og:type', 'website');
+    this.meta.setTag('og:url','https://virusmedicalmask.com');
+      this.meta.setTag('og:image', 'src/favicon.ico');
+
+
     this.myForm=this.formbuilder.group({
       firstname: ['', Validators.required],
       lastname: ['', Validators.required],
@@ -33,32 +50,40 @@ public selected:any;
       governmentpurchase: ['', Validators.required],
       medicalfacility:['',Validators.required],
       businessphone:['',Validators.required],
-      noofmasks:['',Validators.required]
+      noofmasks:['',Validators.required],
+      reference:['']
     });
   }
 
   ngOnInit() {
   }
   submit(){
-    this.openTermsDialog();
+  
        
-    console.log(this.myForm.value);
+   
 
     for (let i in this.myForm.controls) {
       this.myForm.controls[i].markAsTouched();
     }
     if (this.myForm.valid) {
 
-      // let  link = this.serverUrl +;
-      // let data = {
-       
-      // };
-      // this.apiService.addDataWithoutToken(data, 'addorupdatedata').subscribe(res => {
+      console.log(this.myForm.value);
+      let data = {
+        
+          "source":"data_medicalmask",
+          "data":this.myForm.value,       
+      };
+      this.apiService.addDataWithoutToken(data, 'addorupdatedata').subscribe((res:any) => {
 
+       //console.warn(res);
+       if(res.msg=="We’ve sent an email to this address to reset your password"){
+        this.myForm.reset();
+        this.openTermsDialog();
+       }
        
 
         
-      // });
+      });
     }
   }
 
@@ -81,6 +106,9 @@ public selected:any;
       console.log('The dialog was closed');
      
     });
+  }
+  inputUntouch(form: any, val: any) {
+    form.controls[val].markAsUntouched();
   }
 
 }
