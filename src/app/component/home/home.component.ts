@@ -18,18 +18,17 @@ export class HomeComponent implements OnInit {
     //   this.cookie.set('jwtToken', res.token);
     // });
     this.myForm=this.formbuilder.group({
-      fname: ['', Validators.required],
-      lname: ['', Validators.required],
+      firstname: ['', Validators.required],
+      lastname: ['', Validators.required],
       email: ['', Validators.compose([Validators.required, Validators.pattern(/^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/)])],
       phone: ['', Validators.required],
       companyname: ['', Validators.required],
       state: ['', Validators.required],
-      city: ['', Validators.required],
+      country: ['', Validators.required],
       governmentpurchase: ['', Validators.required],
       medicalfacility:[],
       businessphone:[],
-      mobilephone:[],
-      mask:[]
+      noofmasks:[]
     });
   }
 
