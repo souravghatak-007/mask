@@ -10,7 +10,7 @@ import { TransferHttpCacheModule } from '@nguniversal/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgtUniversalModule } from '@ng-toolkit/universal';
 import { MetaModule } from '@ngx-meta/core';
-import { HomeComponent } from './component/home/home.component';
+import { HomeComponent ,Success} from './component/home/home.component';
 import { DemoMaterialModule } from '../material-module';
 import { ApiService} from './api.service';
 import { CookieService } from 'ngx-cookie-service';
@@ -19,6 +19,7 @@ import { CookieService } from 'ngx-cookie-service';
   declarations: [
     AppComponent,
     HomeComponent,
+    Success
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -35,6 +36,6 @@ import { CookieService } from 'ngx-cookie-service';
   providers: [ApiService,CookieService],
   schemas:[CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   bootstrap: [AppComponent],
-  entryComponents: []
+  entryComponents: [Success]
 })
 export class AppModule { }
