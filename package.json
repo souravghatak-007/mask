@@ -46,6 +46,7 @@
     "@ngx-meta/core": "^8.0.2",
     "angular-material": "^1.1.21",
     "aws-serverless-express": "^3.2.0",
+    "compression": "^1.7.4",
     "cors": "~2.8.4",
     "cp-cli": "^1.1.0",
     "domino": "^2.1.3",

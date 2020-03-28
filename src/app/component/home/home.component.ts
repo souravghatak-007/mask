@@ -36,7 +36,7 @@ public selected:any;
     this.meta.setTag('twitter:title', 'Virus Barrier Medical Face Mask');
     this.meta.setTag('og:type', 'website');
     this.meta.setTag('og:url','https://virusmedicalmask.com');
-      this.meta.setTag('og:image', 'src/favicon.ico');
+      this.meta.setTag('og:image', 'https://all-frontend-assets.s3.amazonaws.com/bvt-mask-assetc/images/144-144.png');
 
 
     this.myForm=this.formbuilder.group({
