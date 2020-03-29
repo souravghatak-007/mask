@@ -22,7 +22,8 @@ import {join} from 'path';
 
 // Express server
 export const app = express();
-
+var compression = require('compression');
+app.use(compression());
 const PORT = process.env.PORT || 4000;
 const DIST_FOLDER = join(process.cwd(), 'dist/browser');
 

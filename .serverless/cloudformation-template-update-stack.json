@@ -146,7 +146,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/bvtvirusmedicalmask/production/1585333660014-2020-03-27T18:27:40.014Z/bvtvirusmedicalmask.zip"
+          "S3Key": "serverless/bvtvirusmedicalmask/production/1585421862721-2020-03-28T18:57:42.721Z/bvtvirusmedicalmask.zip"
         },
         "FunctionName": "bvtvirusmedicalmask-production-api",
         "Handler": "lambda.universal",
@@ -165,14 +165,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "ApiLambdaVersionJi7VGj8ILQe402PpbppmAgzCYZxneA6rVHt9nDbTGaQ": {
+    "ApiLambdaVersionOKgh60Z9SRne359grcaxZMzLFzIE7aYcdrlpsnAxydQ": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ApiLambdaFunction"
         },
-        "CodeSha256": "zDgfO7CBWEaZWQl+QkM+6DPlVdZkHOOfU/zh5hHBaAM="
+        "CodeSha256": "SGuYqtga1J0KZ/3ze5kEjYGQtfSPoAetRviROWFn06E="
       }
     },
     "ApiGatewayRestApi": {
@@ -291,7 +291,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1585333624491": {
+    "ApiGatewayDeployment1585421833523": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -351,7 +351,7 @@
     "ApiLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ApiLambdaVersionJi7VGj8ILQe402PpbppmAgzCYZxneA6rVHt9nDbTGaQ"
+        "Ref": "ApiLambdaVersionOKgh60Z9SRne359grcaxZMzLFzIE7aYcdrlpsnAxydQ"
       }
     },
     "ServiceEndpoint": {
