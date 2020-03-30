@@ -18,6 +18,7 @@ export interface DialogData {
 export class HomeComponent implements OnInit {
   @ViewChild(FormGroupDirective, {static: false}) formDirective: FormGroupDirective;
   public myForm: FormGroup;
+  public youtubeFlage:boolean=false;
 public selected:any;
   constructor( public meta: MetaService,public dialog: MatDialog,public formbuilder: FormBuilder,public apiService:ApiService,public cookie:CookieService) { 
     this.apiService.gettemptoken().subscribe((res: any) => {
@@ -56,12 +57,25 @@ public selected:any;
   }
 
   ngOnInit() {
+    setTimeout(()=>{    
+      this.youtubeFlage=true;
+ }, 8000);
   }
+
+    /**show video modal on click of thamnail function by sourav */
+    fetchvideo(){
+      const dialogRef = this.dialog.open(VideoPlayer, {
+        panelClass: 'custom-modalbox-videoplayer-preview',
+        height: 'auto',
+      });
+    }  
+
+
+    /**submit function */
   submit(){
   
        
    
-
     for (let i in this.myForm.controls) {
       this.myForm.controls[i].markAsTouched();
     }
@@ -127,4 +141,22 @@ export class Success {
     this.dialogRef.close();
   }
 
+}
+
+/**listing video player */
+@Component({
+  selector: 'videoplayer',
+  templateUrl: 'videoplayer.html',
+})
+export class VideoPlayer {
+
+  constructor(
+    public dialogRef: MatDialogRef<VideoPlayer>,
+    @Inject(MAT_DIALOG_DATA) public data: any) {
+      //console.warn('videoplayerModal',data.previewData.video);
+  }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
 }
