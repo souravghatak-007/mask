@@ -66,7 +66,16 @@ p,h1,h2,h3,h4,h5{padding:0;margin:0}
 .vmimage2 h2{background-image:url(https://all-frontend-assets.s3.amazonaws.com/bvt-mask-assetc/images/bannerarrow.png);background-repeat:no-repeat;background-position:right top;height:200px;display:flex;align-items:center;position:relative;font-size:57px;text-transform:uppercase;color:#fff;text-shadow:0 2px 5px rgba(0,0,0,0.3);padding-left:12px}
 .vmimage2 h2:after{content:'';position:absolute;left:-13px;top:-53px;height:79px;width:371px;background-image:url(https://all-frontend-assets.s3.amazonaws.com/bvt-mask-assetc/images/arrowshadow.png);background-repeat:no-repeat}
 .vmimage2 h2 span{font-size:48px;color:#f6ff00}
-.videowrapper{width:552px;height:310px;border:5px solid #7198a5}
+.videowrapper{width:552px;height:310px;border:5px solid #7198a5; overflow: hidden; position: relative; cursor: pointer;}
+.videowrapper .videoimage{position: absolute; left: 50%; top: 50%; min-width: 100%; min-height: 100%; object-fit: cover;transform: translate(-50%, -50%);}
+.videowrapper .playicon {
+    position: absolute;
+    z-index: 99;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 165px;
+}
 .blackbtn{background:rgba(24,54,70,1);background:-moz-linear-gradient(top,rgba(24,54,70,1) 0%,rgba(10,30,41,1) 100%);background:-webkit-gradient(left top,left bottom,color-stop(0%,rgba(24,54,70,1)),color-stop(100%,rgba(10,30,41,1)));background:-webkit-linear-gradient(top,rgba(24,54,70,1) 0%,rgba(10,30,41,1) 100%);background:-o-linear-gradient(top,rgba(24,54,70,1) 0%,rgba(10,30,41,1) 100%);background:-ms-linear-gradient(top,rgba(24,54,70,1) 0%,rgba(10,30,41,1) 100%);background:linear-gradient(to bottom,rgba(24,54,70,1) 0%,rgba(10,30,41,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#183646',endColorstr='#0a1e29',GradientType=0);color:#e3e3e3;border-radius:1px;border:0;font-family:'OpenSans-bold';font-size:48px;text-transform:uppercase;padding:0 20px;cursor:pointer;position:relative}
 .blackbtn:after{content:'';height:103%;width:100%;border-radius:8px;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border:5px solid rgba(255,255,255,0.2)}
 button:focus{outline:none}
@@ -154,3 +163,27 @@ mat-card{box-shadow:none!important}
 .downloadpdf h1{color:#fff;width:100%;font-family:'OpenSans-Bold';font-size:80px;text-align:center;line-height:60px;text-transform:uppercase}
 .footer{background-color:#fff;text-align:center}
 .footer p span{padding:0 20px}
+.cdk-overlay-pane.custom-modalbox-videoplayer-preview .closemodal{
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #4bb4ff;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 20px;
+}
+.cdk-overlay-pane.custom-modalbox-videoplayer-preview{
+    width: 45%;
+    height: 469px!important;
+    position: relative;
+    border: 5px solid #4bb4ff;
+
+}
+
+.cdk-overlay-pane.custom-modalbox-videoplayer-preview .mat-dialog-container{overflow: inherit; position: relative;padding: 12px;}

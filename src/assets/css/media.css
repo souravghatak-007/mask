@@ -62,6 +62,7 @@
   .vmimage1{right:487px;width:316px;top:105px}
   }
   @media only screen and (max-width: 1480px) {
+    .cdk-overlay-pane.custom-modalbox-videoplayer-preview {height: 398px!important;}
   .homeblock5 .col-3 img{display:none}
   .col-3{width:55%}
   .homeblock6subwrapper .textwrapper h1{font-size:29px;width:400px;line-height:31px}
@@ -98,7 +99,7 @@
   }
   @media only screen and (max-width: 1300px) {
   .homeblock6{padding:30px 17px!important;background-position:left -180px top!important}
-  .button_w,.button_b{font-size:24px}
+  .button_w,.button_b, .listfooterblock button.button_w{font-size:24px}
   .homeblock6subwrapper{width:742px}
   .downloadpdf{left:787px}
   .col-3{width:59%}
@@ -111,6 +112,20 @@
   .bannerbuttonwrapper button{padding:0 15px;font-size:27px}
   }
   @media only screen and (max-width: 1199px) {
+    .videowrapper .videoimage {
+      position: inherit;
+      left: inherit;
+      top: inherit;
+      min-width: inherit;
+      min-height: inherit;
+      object-fit: inherit;
+      transform: inherit;
+      width: 100%;
+  }
+  .videowrapper {
+    width: inherit;
+    height: inherit;
+}
   .col-3{width:100%}
   .homeblock5 .col-3:nth-last-child(1){width:100%;text-align:center;padding-top:20px}
   .homeblock5 .col-3 .button_b{margin:0 auto;display:block}
@@ -153,16 +168,28 @@
   .bannerbuttonwrapper{padding:0;text-align:center;display:inline-block;width:100%;margin-bottom:20px}
   .bannerbuttonwrapper button{padding:0 15px;font-size:27px;width:100%}
   .vmimage2{width:100%;position:inherit;left:inherit;right:inherit;bottom:inherit}
-  .vmimage2 h2{font-size:37px;background:#1ebceb;height:auto;text-align:center;padding-left:0;width:100%;display:inline-block}
-  .vmimage1.textwrapper p span{height:auto;font-size:17px;line-height:19px;width:100%;background:#ff5a4f;margin-bottom:20px;margin-top:20px}
+  .vmimage2 h2{font-size:37px;background:#1ebceb;height:auto;text-align:center;padding-left:0;width:100%;display:inline-block; margin-bottom: 20px;}
+  .vmimage1.textwrapper p span{
+    height: auto;
+    font-size: 24px;
+    line-height: 28px;
+    width: 100%;
+    background: #ff5a4f;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 17px 0;
+  }
   .vmimage1.textwrapper p{width:100%}
   .vmimage1.textwrapper p:after,.vmimage2 h2:after,.formsubwrapper:after{display:none}
   .bannerblock{background:#d0dbe6!important;padding:20px!important;min-height:inherit;margin-bottom:20px}
   .colcontainer .col-2{width:100%}
   }
   @media only screen and (max-width: 991px) {
+    .cdk-overlay-pane.custom-modalbox-videoplayer-preview {
+      height: 276px!important;
+  }
   .block2listitem{width:100%;width:100%;flex-wrap:wrap-reverse;padding-bottom:90px}
-  .block2listitem .button_w{position:absolute;right:inherit;bottom:20px;left:50%;transform:translatex(-50%)}
+  .block2listitem .button_w{position:absolute;right:inherit;bottom:20px;left:50%;transform:translatex(-50%); width: fit-content;}
   .block2listitem .imagewrapper{margin:0 auto}
   .block2listitem .textwrapper{width:100%;text-align:center;padding-top:20px}
   .homeblock5 table td p{background-position:right top 5px;padding-left:0;padding-right:15px}
@@ -177,6 +204,13 @@
   .homeblock5 .col-3:nth-child(1) h2 span{width:100%;text-align:center}
   }
   @media only screen and (max-width: 768px) {
+    .cdk-overlay-pane.custom-modalbox-videoplayer-preview {
+      height: 276px!important;
+      width: 75%;
+  }
+  .homeblocksubwrapper .textwrapper p{
+    padding: 26px 0px;
+  }
   .footer p span{padding:3px 0;display:block}
   .titlewrapper h2{font-size:36px;padding-bottom:10px}
   }
