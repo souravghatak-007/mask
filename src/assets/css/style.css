@@ -815,6 +815,7 @@ mat-card{box-shadow: none !important;}
     background-repeat: no-repeat !important;
     background-size: cover !important;
     padding: 30px 0 !important;
+    border-radius: 0 !important;
 }
 
 .homeblock6subwrapper{

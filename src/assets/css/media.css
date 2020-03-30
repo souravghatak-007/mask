@@ -101,6 +101,13 @@
 
  
   @media only screen and (max-width: 1620px) {
+    .col-3 {
+      width: 48%;
+  }
+    .homeblock5 .col-3 img {
+      right: -243px;
+      width: 243px;
+  }
     .homeblocksubwrapper .textwrapper h2{
       font-size: 57px;
       line-height: 54px;
@@ -215,7 +222,7 @@
   }
   @media only screen and (max-width: 1380px) {
     .bannerblock {
-      background-position: left -446px bottom !important;
+      background-position: left -107px bottom !important;
   }
 
   }
@@ -236,6 +243,20 @@
     }
   }
   @media only screen and (max-width: 1300px) {
+    .homeblock6 {
+      padding: 30px 17px !important;
+      background-position: left -180px top !important;
+  }
+  .button_w, .button_b{font-size: 24px;}
+  .homeblock6subwrapper {
+    width: 742px;
+}
+.downloadpdf {
+  left: 787px;
+}
+    .col-3 {
+      width: 59%;
+  }
     .col-4 {
       width: 34%;
   }
