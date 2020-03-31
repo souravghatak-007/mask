@@ -19,8 +19,8 @@ export class HomeComponent implements OnInit {
   @ViewChild(FormGroupDirective, {static: false}) formDirective: FormGroupDirective;
   public myForm: FormGroup;
   public youtubeFlage:boolean=false;
-public selected:any;
-public hideSpan:boolean=true;
+  public selected:any;
+  public hideSpan:boolean=true;
   constructor( public meta: MetaService,public dialog: MatDialog,public formbuilder: FormBuilder,public apiService:ApiService,public cookie:CookieService) { 
     this.apiService.gettemptoken().subscribe((res: any) => {
       this.cookie.set('jwtToken', res.token);
@@ -144,22 +144,4 @@ export class Success {
     this.dialogRef.close();
   }
 
-}
-
-/**listing video player */
-@Component({
-  selector: 'videoplayer',
-  templateUrl: 'videoplayer.html',
-})
-export class VideoPlayer {
-
-  constructor(
-    public dialogRef: MatDialogRef<VideoPlayer>,
-    @Inject(MAT_DIALOG_DATA) public data: any) {
-      //console.warn('videoplayerModal',data.previewData.video);
-  }
-
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
 }
