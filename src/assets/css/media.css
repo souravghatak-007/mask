@@ -50,6 +50,9 @@
   .bannerblock{background-position:left -223px bottom!important}
   }
   @media only screen and (max-width: 1560px) {
+    .vmimage2 h2 span {
+      font-size: 36px;
+  }
   .block2listitem .textwrapper h3{font-size:32px}
   .bannerblock{background-position:left -277px bottom!important}
   .bannerbuttonwrapper button{padding:5px 15px;font-size:36px}
@@ -121,6 +124,7 @@
       object-fit: inherit;
       transform: inherit;
       width: 100%;
+      display: block;
   }
   .videowrapper {
     width: inherit;
@@ -192,13 +196,16 @@
   .block2listitem .button_w{position:absolute;right:inherit;bottom:20px;left:50%;transform:translatex(-50%); width: fit-content;}
   .block2listitem .imagewrapper{margin:0 auto}
   .block2listitem .textwrapper{width:100%;text-align:center;padding-top:20px}
-  .homeblock5 table td p{background-position:right top 5px;padding-left:0;padding-right:15px}
+  .homeblock5 table td p{background-position:right top 5px;padding-left:0;padding-right:0px; background: none;}
   table{border:0;width:100%}
+  .homeblock5 table td{display: flex;
+    justify-content: space-between;
+    align-items: center;}
   table caption{font-size:1.3em}
   table thead{border:none;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}
   table tr{border-bottom:3px solid #ddd;display:block;margin-bottom:.625em;border:1px solid #6d6f71}
   table td{border-bottom:1px solid #6d6f71;display:block;font-size:.8em;text-align:right;border-left:0!important;border-right:0!important}
-  table td::before{content:attr(data-label);float:left;font-weight:700;text-transform:uppercase;text-align:left}
+  table td::before{content:attr(data-label);float:left;font-weight:700;text-align:left}
   table td:last-child{border-bottom:0}
   .homeblock5 .col-3:nth-child(1) h2{flex-wrap:wrap;justify-content:center}
   .homeblock5 .col-3:nth-child(1) h2 span{width:100%;text-align:center}
@@ -212,5 +219,5 @@
     padding: 26px 0px;
   }
   .footer p span{padding:3px 0;display:block}
-  .titlewrapper h2{font-size:36px;padding-bottom:10px}
+  .titlewrapper h2{font-size:36px;padding-bottom:10px; line-height: 38px;}
   }
