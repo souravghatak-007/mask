@@ -93,7 +93,7 @@ export class HomeComponent implements OnInit {
       this.apiService.addDataWithoutToken(data, 'addorupdatedata').subscribe((res:any) => {
 
        //console.warn(res);
-       if(res.msg=="We’ve sent an email to this address to reset your password"){
+       if(res.status=="success" || res.msg=="We’ve sent an email to this address to reset your password"){
         this.myForm.reset();
         this.openTermsDialog();
        }
