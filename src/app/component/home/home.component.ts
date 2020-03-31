@@ -20,11 +20,12 @@ export class HomeComponent implements OnInit {
   public myForm: FormGroup;
   public youtubeFlage:boolean=false;
 public selected:any;
+public hideSpan:boolean=true;
   constructor( public meta: MetaService,public dialog: MatDialog,public formbuilder: FormBuilder,public apiService:ApiService,public cookie:CookieService) { 
     this.apiService.gettemptoken().subscribe((res: any) => {
       this.cookie.set('jwtToken', res.token);
     });
-
+    this.hideSpan=true;
     this.meta.setTitle('Virus Barrier Medical Face Mask');
     // this.meta.update({ name: 'description', content: 'Dynamic Hello Angular Lovers description!' });
     this.meta.setTag('og:description', 'Virus Barrier Medical Face Mask to keep medical professionals safe and protected against harmful viruses, bacteria, and other critical circumstances, while also tending to their comfort.');
@@ -57,17 +58,19 @@ public selected:any;
   }
 
   ngOnInit() {
-    setTimeout(()=>{    
-      this.youtubeFlage=true;
- }, 8000);
   }
 
     /**show video modal on click of thamnail function by sourav */
     fetchvideo(){
-      const dialogRef = this.dialog.open(VideoPlayer, {
-        panelClass: 'custom-modalbox-videoplayer-preview',
-        height: 'auto',
-      });
+      
+      this.youtubeFlage=true;
+      this.hideSpan=false;
+      console.log(this.youtubeFlage);
+      console.log(this.hideSpan);
+      // const dialogRef = this.dialog.open(VideoPlayer, {
+      //   panelClass: 'custom-modalbox-videoplayer-preview',
+      //   height: 'auto',
+      // });
     }  
 
 
